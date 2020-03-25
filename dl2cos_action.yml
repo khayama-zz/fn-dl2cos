@@ -5,9 +5,12 @@ packages:
     actions:
       dl2cos:
         version: 1.0
-        description: schematics apply with IBMCLOUD_API_KEY, WORKSPACE_ID
+        description: IBM Cloud Function to download a file and upload to IBM Cloud Object Storage
         docker: khayama/ibmcloud-cli
         function: schematics-apply.sh
         inputs:
-          IBMCLOUD_API_KEY: $IBMCLOUD_API_KEY
-          WORKSPACE_ID: $WORKSPACE_ID
+          COS_ENDPOINT : $COS_ENDPOINT
+          COS_API_KEY_ID : $COS_API_KEY_ID
+          COS_RESOURCE_CRN : $COS_RESOURCE_CRN
+          COS_BUCKET_LOCATION : $COS_BUCKET_LOCATION
+          URL : $URL
