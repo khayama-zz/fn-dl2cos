@@ -1,0 +1,13 @@
+packages:
+  dl2cos_package:
+    version: 1.0
+    license: Apache-2.0
+    actions:
+      dl2cos:
+        version: 1.0
+        description: schematics apply with IBMCLOUD_API_KEY, WORKSPACE_ID
+        docker: khayama/ibmcloud-cli
+        function: schematics-apply.sh
+        inputs:
+          IBMCLOUD_API_KEY: $IBMCLOUD_API_KEY
+          WORKSPACE_ID: $WORKSPACE_ID
