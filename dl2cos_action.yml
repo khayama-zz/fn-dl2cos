@@ -9,8 +9,8 @@ packages:
         runtime: python@3
         function: dl2cos_code.py
         limits:
-          timeout : 300000 ms
-          memorySize : 1024 MB
+          timeout : 300000
+          memorySize : 1024
         inputs:
           COS_ENDPOINT : $COS_ENDPOINT
           COS_API_KEY_ID : $COS_API_KEY_ID
