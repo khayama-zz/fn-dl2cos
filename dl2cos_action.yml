@@ -6,8 +6,8 @@ packages:
       dl2cos:
         version: 1.0
         description: IBM Cloud Function to download a file and upload to IBM Cloud Object Storage
-        runtime: python:3.7
-        function: schematics-apply.sh
+        runtime: python@3
+        function: dl2cos_code.py
         inputs:
           COS_ENDPOINT : $COS_ENDPOINT
           COS_API_KEY_ID : $COS_API_KEY_ID
