@@ -6,7 +6,7 @@ packages:
       dl2cos:
         version: 1.0
         description: IBM Cloud Function to download a file and upload to IBM Cloud Object Storage
-        docker: khayama/ibmcloud-cli
+        runtime: python:3.7
         function: schematics-apply.sh
         inputs:
           COS_ENDPOINT : $COS_ENDPOINT
