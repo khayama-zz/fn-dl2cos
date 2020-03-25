@@ -19,10 +19,10 @@ def main(dict):
     URL = dict['URL']
     try:
         filename = os.path.basename(URL)
-        print(filename)
+        print('File name : ' + filename)
         with requests.get(URL, stream=True) as r:
             r.raise_for_status()
-            print(r.headers['Content-Type'])
+            print('Content-Type : ' + r.headers['Content-Type'])
             with open('/tmp/' + filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=512 * 1024): 
                     if chunk: # filter out keep-alive new chunks
