@@ -8,6 +8,9 @@ packages:
         description: IBM Cloud Function to download a file and upload to IBM Cloud Object Storage
         runtime: python@3
         function: dl2cos_code.py
+        limits:
+          timeout : 300000 ms
+          memorySize : 1024 MB
         inputs:
           COS_ENDPOINT : $COS_ENDPOINT
           COS_API_KEY_ID : $COS_API_KEY_ID
